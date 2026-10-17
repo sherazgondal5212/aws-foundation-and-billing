@@ -1,0 +1,17 @@
+[ AWS Account us-east-1 ]
+       |
+       +-- [ IAM ] User:1, Roles:17, MFA:Enabled
+       |
+       +-- [ Billing ] Budget: $5 (80% Actual, 100% Forecasted Alert)
+       |
+       +-- [ S3 ]
+       |    |-- sherazwebsite (Existing)
+       |    |-- cdk-assets (Existing)
+       |    +-- gondal-foundation-* (New - Encrypted, Versioned, Private)
+       |
+       +-- [ EC2 ] i-0e8090630edb0da98 t3.micro (Stopped - Cost Optimized)
+       |
+       +-- [ CloudShell ] - Dev Environment
+
+Security: BlockPublicAccess + AES256 + Versioning + MFA
+Cost: Stopped EC2 + Budget Alerts
